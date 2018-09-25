@@ -36,7 +36,8 @@ const METHODS = [
   'intersect',
   'intersectByKeys',
   'merge',
-  'keyBy'
+  'keyBy',
+  'groupBy'
 ]
 
 export default function({ types: t }) {
