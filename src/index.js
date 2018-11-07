@@ -1,3 +1,50 @@
+const JS_STANDARD_OBJECTS = [
+  'Object',
+  'Function',
+  'Boolean',
+  'Symbol',
+  'Error',
+  'EvalError',
+  'InternalError',
+  'RangeError',
+  'ReferenceError',
+  'SyntaxError',
+  'TypeError',
+  'URIError',
+  'Number',
+  'Math',
+  'Date',
+  'String',
+  'RegExp',
+  'Array',
+  'Int8Array',
+  'Uint8Array',
+  'Uint8ClampedArray',
+  'Int16Array',
+  'Uint16Array',
+  'Int32Array',
+  'Uint32Array',
+  'Float32Array',
+  'Float64Array',
+  'Map',
+  'Set',
+  'WeakMap',
+  'WeakSet',
+  'ArrayBuffer',
+  'SharedArrayBuffer',
+  'Atomics',
+  'DataView',
+  'JSON',
+  'Promise',
+  'Generator',
+  'GeneratorFunction',
+  'AsyncFunction',
+  'Reflect',
+  'Proxy',
+  'Intl',
+  'WebAssembly'
+]
+
 const METHODS = [
   'keys',
   'values',
@@ -67,6 +114,10 @@ export default function({ types: t }) {
         let args = path.node.arguments
         let object = path.node.callee.object
         let method = path.node.callee.property.name
+
+        if (JS_STANDARD_OBJECTS.indexOf(object.name) !== -1) {
+          return
+        }
 
         if (METHODS.indexOf(method) === -1) {
           return
