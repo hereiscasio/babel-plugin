@@ -86,7 +86,11 @@ const METHODS = [
   'keyBy',
   'groupBy',
   'sort',
-  'sortBy'
+  'sortBy',
+  'append',
+  'prepend',
+  'index',
+  'insert'
 ]
 
 export default function({ types: t }) {
