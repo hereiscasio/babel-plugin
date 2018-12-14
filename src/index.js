@@ -90,7 +90,8 @@ const METHODS = [
   'append',
   'prepend',
   'index',
-  'insert'
+  'insert',
+  'join'
 ]
 
 export default function({ types: t }) {
