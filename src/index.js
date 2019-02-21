@@ -91,7 +91,8 @@ const METHODS = [
   'prepend',
   'index',
   'insert',
-  'join'
+  'join',
+  'partition'
 ]
 
 export default function({ types: t }) {
