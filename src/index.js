@@ -114,8 +114,8 @@ export default function({ types: t }) {
         }
 
         if (path.node.callee.object.type === 'Identifier' &&
-            path.node.callee.object.name === 'UniSharp.Helpers' &&
-            path.node.callee.property.name === 'collection') {
+            path.node.callee.object.name === 'UniSharp.Helpers.Collection' &&
+            path.node.callee.property.name === 'call') {
           return
         }
 
@@ -134,8 +134,8 @@ export default function({ types: t }) {
         path.replaceWith(
           t.callExpression(
             t.memberExpression(
-              t.identifier('UniSharp.Helpers'),
-              t.identifier('collection')
+              t.identifier('UniSharp.Helpers.Collection'),
+              t.identifier('call')
             ),
             [t.stringLiteral(method), object, ...args]
           )
