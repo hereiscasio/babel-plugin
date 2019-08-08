@@ -52,6 +52,7 @@ const METHODS = [
   'count',
   'has',
   'get',
+  'set',
   'sum',
   'avg',
   'each',
