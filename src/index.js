@@ -93,7 +93,8 @@ const METHODS = [
   'index',
   'insert',
   'join',
-  'partition'
+  'partition',
+  'flip'
 ]
 
 export default function({ types: t }) {
