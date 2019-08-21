@@ -19,5 +19,8 @@
   },
   "keywords": [
     "babel-plugin"
+  ],
+  "files": [
+    "lib"
   ]
 }
