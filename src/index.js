@@ -94,7 +94,8 @@ const METHODS = [
   'insert',
   'join',
   'partition',
-  'flip'
+  'flip',
+  'fill'
 ]
 
 export default function({ types: t }) {
