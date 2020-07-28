@@ -95,7 +95,9 @@ const METHODS = [
   'join',
   'partition',
   'flip',
-  'fill'
+  'fill',
+  'freeze',
+  'isFrozen'
 ]
 
 export default function({ types: t }) {
